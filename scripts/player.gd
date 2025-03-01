@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -350
+const SPEED = 150.0
+const JUMP_VELOCITY = -325
+var facing = "right"
+@onready var animSprite = $AnimatedSprite2D
 
 
 func _physics_process(delta: float) -> void:
@@ -23,5 +25,20 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	if Input.is_action_just_pressed("left"):
+		facing = "left"
+		animSprite.scale.x = -1
+	if Input.is_action_just_pressed("right"):
+		facing = "right"
+		animSprite.scale.x = 1
+	
+	if velocity == Vector2.ZERO:
+		animSprite.play("idle")
+	if not is_on_floor():
+		animSprite.play("jump")
+	else:
+		animSprite.play("moving")
+	
 
 	move_and_slide()
