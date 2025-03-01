@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://kqp8t6mt4pov"]
+[gd_scene load_steps=7 format=4 uid="uid://kqp8t6mt4pov"]
 
 [ext_resource type="Texture2D" uid="uid://c370ujfgrlb3l" path="res://assets/images/nestle.png" id="1_isurb"]
+[ext_resource type="PackedScene" uid="uid://b7gt2cvjdohdr" path="res://newScenes/player.tscn" id="2_qwipj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2iof1"]
 texture = ExtResource("1_isurb")
@@ -11248,8 +11249,12 @@ sources/0 = SubResource("TileSetAtlasSource_u3mqy")
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-54, -48)
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_qwipj")]
+position = Vector2(13, 84)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-186.885, -190.894)
+scale = Vector2(4.08924, 3.26084)
 anchor_mode = 0
 zoom = Vector2(3, 3)
 
