@@ -29,6 +29,7 @@ text = "Climbing Climate"
 label_settings = SubResource("LabelSettings_hpp38")
 
 [node name="Button2" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 9.0
 offset_top = 110.0
 offset_right = 56.0
