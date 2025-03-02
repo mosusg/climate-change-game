@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://kqp8t6mt4pov"]
+[gd_scene load_steps=17 format=4 uid="uid://kqp8t6mt4pov"]
 
 [ext_resource type="Texture2D" uid="uid://dsqh8pj3aymdi" path="res://assets/images/stock city background-1.png (2).png" id="1_ag2um"]
 [ext_resource type="Texture2D" uid="uid://c370ujfgrlb3l" path="res://assets/images/nestle.png" id="1_isurb"]
@@ -16959,6 +16959,9 @@ texture = ExtResource("1_isurb")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_bsxpq")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_650qi"]
+size = Vector2(105, 71.5)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="bgGradient" type="Sprite2D" parent="."]
@@ -17018,5 +17021,14 @@ offset_top = 710.0
 offset_bottom = 710.0
 scale = Vector2(7, 7)
 
+[node name="COYNE" parent="." instance=ExtResource("5_3nnbp")]
+position = Vector2(1495, 80)
+
 [node name="rich man" parent="." instance=ExtResource("5_3nnbp")]
 position = Vector2(4064, 80)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1495, 62)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_650qi")
