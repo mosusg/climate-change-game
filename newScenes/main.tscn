@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dsqh8pj3aymdi" path="res://assets/images/stock city background-1.png (2).png" id="1_ag2um"]
 [ext_resource type="Texture2D" uid="uid://c370ujfgrlb3l" path="res://assets/images/nestle.png" id="1_isurb"]
 [ext_resource type="PackedScene" uid="uid://b7gt2cvjdohdr" path="res://newScenes/player.tscn" id="2_qwipj"]
-[ext_resource type="PackedScene" uid="uid://xfubwju6yog4" path="res://newScenes/dialogueContainer.tscn" id="4_dtq6w"]
-[ext_resource type="PackedScene" uid="uid://c6gf87ng3vbqq" path="res://newScenes/rich_man.tscn" id="5_3nnbp"]
+[ext_resource type="PackedScene" path="res://newScenes/dialogueContainer.tscn" id="4_dtq6w"]
+[ext_resource type="PackedScene" path="res://newScenes/rich_man.tscn" id="5_3nnbp"]
 
 [sub_resource type="Gradient" id="Gradient_e5ol0"]
 colors = PackedColorArray(0.188235, 0.219608, 1, 1, 0.65, 0.924167, 1, 1)
@@ -16960,7 +16960,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_bsxpq")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_650qi"]
-size = Vector2(105, 71.5)
+size = Vector2(78.5, 71.5)
 
 [node name="Node2D" type="Node2D"]
 
@@ -17023,12 +17023,32 @@ scale = Vector2(7, 7)
 
 [node name="COYNE" parent="." instance=ExtResource("5_3nnbp")]
 position = Vector2(1495, 80)
+script = null
 
 [node name="rich man" parent="." instance=ExtResource("5_3nnbp")]
 position = Vector2(4064, 80)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="dialoguge 4" type="Area2D" parent="."]
+position = Vector2(11960, 496)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dialoguge 4"]
+shape = SubResource("RectangleShape2D_650qi")
+
+[node name="dialoguge 3" type="Area2D" parent="."]
+position = Vector2(5980, 248)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dialoguge 3"]
+shape = SubResource("RectangleShape2D_650qi")
+
+[node name="dialoguge 1" type="Area2D" parent="."]
+position = Vector2(2990, 124)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dialoguge 1"]
+shape = SubResource("RectangleShape2D_650qi")
+
+[node name="dialoguge 2" type="Area2D" parent="."]
 position = Vector2(1495, 62)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dialoguge 2"]
+position = Vector2(-818.75, -2)
 shape = SubResource("RectangleShape2D_650qi")
