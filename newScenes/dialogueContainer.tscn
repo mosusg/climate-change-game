@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://xfubwju6yog4"]
+
+[ext_resource type="FontFile" uid="uid://dwuky361ib2ub" path="res://assets/fonts/comic sans.ttf" id="1_es62w"]
+
+[sub_resource type="Theme" id="Theme_oubnn"]
+default_base_scale = 2.0
+default_font = ExtResource("1_es62w")
+default_font_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6vact"]
+bg_color = Color(0.203322, 0.203322, 0.203322, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_right = 104.0
+
+[node name="dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.835294)
+layout_mode = 0
+offset_left = 9.0
+offset_right = 49.0
+offset_bottom = 40.0
+theme = SubResource("Theme_oubnn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_6vact")
