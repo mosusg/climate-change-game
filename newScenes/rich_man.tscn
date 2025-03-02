@@ -1,3 +1,39 @@
-[gd_scene format=3 uid="uid://c6gf87ng3vbqq"]
+[gd_scene load_steps=6 format=3 uid="uid://c6gf87ng3vbqq"]
+
+[ext_resource type="Texture2D" uid="uid://ci40mvubaj4ia" path="res://assets/images/richMan.png" id="1_alghx"]
+[ext_resource type="Script" path="res://scripts/rich_man.gd" id="1_wh4c7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y16qt"]
+atlas = ExtResource("1_alghx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak11x"]
+atlas = ExtResource("1_alghx")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ekm4f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y16qt")
+}],
+"loop": true,
+"name": &"forward",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ak11x")
+}],
+"loop": true,
+"name": &"left",
+"speed": 0.0
+}]
 
 [node name="rich man" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_wh4c7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ekm4f")
+animation = &"left"
