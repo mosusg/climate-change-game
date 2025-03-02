@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://kqp8t6mt4pov"]
+[gd_scene load_steps=15 format=4 uid="uid://kqp8t6mt4pov"]
 
 [ext_resource type="Texture2D" uid="uid://dsqh8pj3aymdi" path="res://assets/images/stock city background-1.png (2).png" id="1_ag2um"]
 [ext_resource type="Texture2D" uid="uid://c370ujfgrlb3l" path="res://assets/images/nestle.png" id="1_isurb"]
@@ -10,6 +10,13 @@ colors = PackedColorArray(0.188235, 0.219608, 1, 1, 0.65, 0.924167, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_qrhs3"]
 gradient = SubResource("Gradient_e5ol0")
+
+[sub_resource type="Gradient" id="Gradient_b2ifs"]
+offsets = PackedFloat32Array(0, 0.993506)
+colors = PackedColorArray(0.584314, 0.501961, 0, 1, 0.439216, 0.611765, 0.462745, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_udew3"]
+gradient = SubResource("Gradient_b2ifs")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2iof1"]
 texture = ExtResource("1_isurb")
@@ -16959,6 +16966,13 @@ position = Vector2(687.293, -61.4269)
 rotation = 1.5708
 scale = Vector2(4.99772, 27.5092)
 texture = SubResource("GradientTexture2D_qrhs3")
+
+[node name="bgGradient2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(4202, -60)
+rotation = 1.5708
+scale = Vector2(4.99772, 27.5092)
+texture = SubResource("GradientTexture2D_udew3")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
